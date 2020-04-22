@@ -26,26 +26,27 @@ public class CucSelenium {
 
 	@Given("^User enters URL$")
 	public void user_enters_URL() throws Throwable {
+		System.out.println("user_enters_URL");
 		driver.get("http://demowebshop.tricentis.com/");
 		driver.findElement(By.linkText("Log in")).click();
 	}
 
 	@And("^he enters user name$")
 	public void he_enters_user_name() throws Throwable {
-		// Write code here that turns the phrase above into concrete actions
+		System.out.println("he_enters_user_name");
 		driver.findElement(By.id("Email")).sendKeys("vishnu@vmail.com");
 	}
 
 	@When("^he enters password$")
 	public void he_enters_password() throws Throwable {
-		// Write code here that turns the phrase above into concrete actions
+		System.out.println("he_enters_password");
 		driver.findElement(By.id("Password")).sendKeys("123456");
 	}
 
 	@Then("^home page is discpalyed$")
 	public void home_page_is_discpalyed() throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
-		System.out.println("home page");
+		System.out.println("home_page_is_discpalyed");
 		// driver.findElement(By.xpath("//*[@value='Log in'])")).click();
 		driver.findElement(
 				By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div/div[2]/div[1]/div[2]/div[2]/form/div[5]/input"))
