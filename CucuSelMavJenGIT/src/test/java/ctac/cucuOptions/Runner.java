@@ -13,7 +13,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 			strict=true,
 			//dryRun=true,
 			plugin= {"pretty","html:target/cucumber","json:target/cucumber.json","junit:target/cukes.xml"})
-public class Runner extends AbstractTestNGCucumberTests{
+public class Runner {
 	//to call needed methods from testgn when triggered via maven
 
 }
