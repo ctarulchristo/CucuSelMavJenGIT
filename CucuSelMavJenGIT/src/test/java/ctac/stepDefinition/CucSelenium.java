@@ -24,26 +24,26 @@ public class CucSelenium {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 
-	@Given("User enters url")
-	public void user_enters_url() {
+	@Given("^User enters URL$")
+	public void user_enters_URL() throws Throwable {
 		driver.get("http://demowebshop.tricentis.com/");
 		driver.findElement(By.linkText("Log in")).click();
 	}
 
-	@And("He enters userName")
-	public void he_enters_userName() {
+	@And("^he enters user name$")
+	public void he_enters_user_name() throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
 		driver.findElement(By.id("Email")).sendKeys("vishnu@vmail.com");
 	}
 
-	@When("He enters password")
-	public void he_enters_password() {
+	@When("^he enters password$")
+	public void he_enters_password() throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
 		driver.findElement(By.id("Password")).sendKeys("123456");
 	}
 
-	@Then("Home page is displayed")
-	public void home_page_is_displayed() {
+	@Then("^home page is discpalyed$")
+	public void home_page_is_discpalyed() throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
 		System.out.println("home page");
 		// driver.findElement(By.xpath("//*[@value='Log in'])")).click();
